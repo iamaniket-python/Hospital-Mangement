@@ -1,0 +1,57 @@
+{% extends 'hospital/homebase.html' %}
+{% load widget_tweaks %}
+{%load static%}
+
+{% block content %}
+<style>
+  .col-md-6 .form-group {
+    margin-bottom: 20px; 
+}
+</style>
+<form method="post">
+  {% csrf_token %}
+  <div class="container register-form">
+    <div class="form">
+      <div class="note">
+        <section id="team" class="section-padding">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                      <div class="section-title">
+                          <h1 class="display-4 fw-semibold">PatientLogin</h1>
+                          <div class="line"></div>
+                        
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </section>
+      </div>
+
+      <div class="form-content">
+        <div class="row">
+          <div class="col-md-6">
+
+            <div class="form-group">
+              {% render_field form.username class="form-control" placeholder="Username" %}
+            </div>
+
+          </div>
+          <div class="col-md-6">
+
+            <div class="form-group">
+              {% render_field form.password class="form-control" placeholder="Password" %}
+            </div>
+
+          </div>
+        </div>
+        <br>
+        <button type="submit" class="btnSubmit btn btn-outline-success">Login</button>
+        <div class="text-center">Do not have account? <a href="doctorsignup">Signup here</a></div>
+      </div>
+    </div>
+  </div>
+
+</form>
+
+{% endblock content %}

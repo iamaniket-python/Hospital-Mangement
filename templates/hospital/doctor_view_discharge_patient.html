@@ -1,0 +1,83 @@
+{% extends 'hospital/doctor_base.html' %}
+{% block content %}
+{%load static%}
+<form method="post">
+  {% csrf_token %}
+  <div class="container register-form">
+    <div class="form">
+      <div class="note">
+     
+      </div>
+
+      <header >
+        <div class="px-3 py-2  text-white ">
+          <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+              <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                <img src="{% static DoctorProfilePic.url %}" alt="" width="100" height="100" class="rounded-circle me-2">
+                <h2>{{request.user.first_name}}</h2>
+              </a>
+            
+              
+            
+              <div class="" style="width: 8rem;">
+               <h6>Doctor</h6>
+              </div>
+             
+              <ul class="nav col-12 col-lg-auto my-2 my-md-0 text-small mx-auto">
+                <li>
+                  <a href="/doctor-dashboard" class="nav-link text-black">
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a href="/doctor-patient" class="nav-link text-black">
+                    Patient
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/doctor-appointment" class="nav-link text-black">
+                    Appointment
+                  </a>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+        
+      </header>
+  <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style="background-color: #43d5cb;" colspan="7"><center>Your Discharged Patient List</center></th>
+           
+          </tr>
+          <tr>
+            <th>Name</th>
+  
+            <th>Admit Date</th>
+            <th>Release Date</th>
+            <th>Symptoms</th>
+            <th>Mobile</th>
+            <th>Address</th>
+  
+          </tr>
+        </thead>
+        {% for p in dischargedpatients %}
+        <tr>
+          <td> {{p.patientName}}</td>
+          <td>{{p.admitDate}}</td>
+          <td>{{p.releaseDate}}</td>
+          <td>{{p.symptoms}}</td>
+          <td>{{p.mobile}}</td>
+          <td>{{p.address}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+  </div>
+</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,42 @@
+{% extends 'hospital/admin_base.html' %}
+{% block content %}
+{%load static%}
+
+
+        <br>
+        
+            <br>
+            <div class="container">
+             
+              <div class="row">
+                <div class="col-md-12">
+                  <table class="table table-bordered" id="dev-table">
+                    <thead>
+                      <tr>
+                        <th style="background-color: #43d5cb;" colspan="7"><center>Department & Doctors</center></th>
+                       
+                      </tr>
+                      <tr>
+                        <th>Department</th>
+                        <th>Doctor Name</th>
+                        <th>Mobile</th>
+                      </tr>
+                    </thead>
+                    {% for d in doctors %}
+                    <tr>
+                      <td>{{d.department}}</td>
+                      <td> {{d.get_name}}</td>
+                      <td>{{d.mobile}}</td>
+                    </tr>
+                    {% endfor %}
+                  </table>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+

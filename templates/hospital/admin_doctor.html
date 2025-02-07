@@ -1,0 +1,65 @@
+{% extends 'hospital/admin_base.html' %}
+{% load static %}
+{% block content %}
+
+      <div class=" col-md-12">
+        <br>
+      
+            <div class="row">
+                <div class="col-sm-3">
+                  <div class="card-deck">
+                    <div class="card-body">
+                      <a href="/admin-view-doctor">
+                        <h6 class="m-b-20">Doctor Record</h6>
+                      </a>
+                      <br>
+                      <h2 class="text-right"><i class="fas fa-user-nurse f-left"></i></h2>
+                     
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card-deck">
+                      <div class="card-body">
+                        <a href="/admin-add-doctor">
+                          <h6 class="m-b-20">Register Doctor</h6>
+                        </a>
+                        <br>
+                        <h2 class="text-right"><i class="fas fa-user-plus f-left"></i></h2>
+                    
+                      </div>
+                    </div>
+                  </div>
+                <div class="col-sm-3">
+                  <div class="card-deck">
+                    <div class="card-body">
+                      <a href="/admin-approve-doctor">
+                        <h6 class="m-b-20">Approve Doctor</h6>
+                      </a>
+                      <br>
+                      <h2 class="text-right"><i class="fas fa-check-circle f-left"></i></h2>
+                  
+                    </div>
+                  </div>
+                </div>
+                  <div class="col-sm-3">
+                  <div class="card-deck">
+                    <div class="card-body">
+                      <a href="/admin-view-doctor-specialisation">
+                        <h6 class="m-b-20">Doctor Specialisation</h6>
+                      </a>
+                      <br>
+                      <h2 class="text-right"><i class="fas fa-user-md f-left"></i></h2>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+            <br>
+           
+          </div>
+    </div>
+{% endblock content %}

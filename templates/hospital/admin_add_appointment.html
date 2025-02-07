@@ -1,0 +1,44 @@
+{% extends 'hospital/admin_base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+<style>
+  .col-md-12 .form-group {
+    margin-bottom: 20px; 
+}
+</style>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="container register-form">
+    <div class="form">
+      <div class="note">
+        <div class="note">
+          
+      </div>
+      <div class="form-content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              {% render_field appointmentForm.description class="form-control" placeholder="Description" %}
+            </div>
+            <div class="form-group">
+              {% render_field appointmentForm.doctorId class="form-control" placeholder="doctor" %}
+            </div>
+            <div class="form-group">
+              {% render_field appointmentForm.patientId class="form-control" placeholder="patient" %}
+            </div>
+
+          </div>
+
+        </div>
+        <button type="submit" class="btnSubmit btn btn-outline-success">Book</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</form>
+
+{% endblock content %}

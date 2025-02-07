@@ -1,0 +1,35 @@
+{% extends 'hospital/admin_base.html' %}
+{% block content %}
+{%load static%}
+
+<div class="container">
+  <div class="panel panel-primary">
+    <table class="table table-bordered" id="dev-table">
+      <thead>
+        <tr>
+          <th style="background-color: #43d5cb;" colspan="7"><center>Discharge Patient</center></th>
+         
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Symptoms</th>
+          <th>Mobile</th>
+          <th>Discharge</th>
+        </tr>
+      </thead>
+      {% for p in patients %}
+      <tr>
+        <td> {{p.get_name}}</td>
+        <td>{{p.symptoms}}</td>
+        <td>{{p.mobile}}</td>
+        <td><a class="btn btn-primary btn-xs" href="{% url 'discharge-patient' p.id  %}"><span class="glyphicon glyphicon-log-out"></span></a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+</div>
+</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends 'hospital/patient_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+      <div class="col-sm-6">
+        <div class="card-deck">
+          <div class="card-body">
+            <a href="/patient-view-appointment">
+              <h6 class="m-b-20">View Your Appointment</h6>
+            </a>
+            <br>
+            <h2 class="text-right"><i class="fas fa-calendar f-left"></i></h2>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card-deck">
+          <div class="card-body">
+            <a href="/patient-book-appointment">
+              <h6 class="m-b-20">Book Appointment</h6>
+            </a>
+            <br>
+            <h2 class="text-right"><i class="fas fa-book-medical f-left"></i></h2>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+  </div>
+<br>
+
+{% endblock content %}

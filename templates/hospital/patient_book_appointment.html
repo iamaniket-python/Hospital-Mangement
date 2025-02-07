@@ -1,0 +1,50 @@
+{% extends 'hospital/patient_base.html' %}
+{%load static %}
+{% load widget_tweaks %}
+{% block content %}
+
+
+{% if message %}
+<script>
+  var a = "{{message}}";
+  alert(a);
+</script>
+
+{% endif %}
+
+
+<form method="post">
+  {% csrf_token %}
+  <div class="container register-form">
+    <div class="form">
+      <div class="note">
+        <table class="table " id="dev-table">
+          <thead>
+            <tr>
+              <th style="background-color: #43d5cb;" colspan="7"><center>Delete Your Appointments</center></th>
+             
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="form-content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              {% render_field appointmentForm.description class="form-control" placeholder="Description" %}
+            </div>
+            <div class="form-group">
+              {% render_field appointmentForm.doctorId class="form-control" placeholder="doctor" %}
+            </div>
+ 
+          </div>
+
+        </div>
+        <br>
+        <button type="submit" class="btnSubmit btn btn-outline-success">Book</button>
+      </div>
+    </div>
+  </div>
+</form>
+<br>
+{% endblock content %}

@@ -1,0 +1,41 @@
+{% extends 'hospital/homebase.html' %}
+{% include "hospital/navbar.html" %}
+{%load static%}
+{% block content %}
+<style>
+  .cardo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    max-height: 250px;
+    
+}
+
+</style>
+<br>
+
+  <div class="card-body ">
+    <div class="cardo  text-center">
+      <img src="{% static 'assets/images/d.jpg'%}" class="card-img-top" alt="Card Image">
+      <div class="card-body d-flex flex-column">
+        <h1 class="display-4">Hey {{request.user.first_name}}</h1>
+        <p class="lead">Your Account is not approved till now <br><br>Our Team is checking your profile <br><br> Soon your Account will be confirmed !!!</p>
+        <a class=" btn-lg btn btn-outline-danger" href="/logout" role="button">Logout For Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  <br>
+{% endblock content %}
