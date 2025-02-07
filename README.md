@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Features & Functionality
 
 Admin Panel
@@ -81,3 +82,6 @@ Add captcha verification to prevent bot signups.
 Implement a password reset feature for better security.
 
 This system provides a comprehensive hospital management solution, ensuring seamless administration while maintaining security and efficiency.
+=======
+# Hospital-Mangement
+>>>>>>> 4fa4c3ae9c1dbeaed60802bef24a7247392a7b09
